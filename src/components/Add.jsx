@@ -10,7 +10,25 @@ const Add = () => {
     required
     id="outlined-required"
     label="Required"
-    defaultValue="Hello World"
+    defaultValue="Employee ID"
+  /> <br /> <br />
+      <TextField
+    required
+    id="outlined-required"
+    label="Required"
+    defaultValue="Employee Name"
+  /> <br /> <br />
+      <TextField
+    required
+    id="outlined-required"
+    label="Required"
+    defaultValue="Department"
+  /> <br /> <br />
+      <TextField
+    required
+    id="outlined-required"
+    label="Required"
+    defaultValue="Location"
   />
     </>
   )
