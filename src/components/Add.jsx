@@ -1,35 +1,62 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
+
 const Add = () => {
+  const [Employee, setEmployee]=useState({
+    empId:'',
+    empName:'',
+    department:'',
+    location:'',
+  })
+
+  let fetchValue=(e)=>{
+    // console.log(e)
+    setEmployee({...Employee,[e.target.name]:e.target.value}) //spread operation (...)
+  }
+
+  let sendData=()=>{
+    alert("Data Submitted")
+    console.log(Employee)
+  }
   return (
     <>
     <h2>New Employee</h2>
+
     <TextField
-    required
     id="outlined-required"
-    label="Required"
-    defaultValue="Employee ID"
+    label="Employee ID"
+    name='empId'
+    value={Employee.empId}
+    onChange={fetchValue}
+    
   /> <br /> <br />
       <TextField
-    required
     id="outlined-required"
-    label="Required"
-    defaultValue="Employee Name"
+    label="Employee Name"
+    name='empName'
+    // value={Employee.empName}
+    onChange={fetchValue}
+  
   /> <br /> <br />
       <TextField
-    required
     id="outlined-required"
-    label="Required"
-    defaultValue="Department"
+    label="Department"
+    name='department'
+    value={Employee.department}
+    onChange={fetchValue}
+
   /> <br /> <br />
       <TextField
-    required
     id="outlined-required"
-    label="Required"
-    defaultValue="Location"
-  />
+    label="Location"
+    name='location'
+    value={Employee.location}
+    onChange={fetchValue}
+  
+  /> <br /> <br />
+<button varient="submit" onClick={sendData}>Submit</button>
     </>
   )
 }

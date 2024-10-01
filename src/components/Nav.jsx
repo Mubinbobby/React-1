@@ -18,7 +18,7 @@ const Nav = () => {
         
         </IconButton>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          Employee App
+          Movie App
         </Typography>
         <Link to={'/'}><Button color="inherit">Home</Button></Link>
         <Link to={'/add'}><Button color="inherit">Add</Button></Link>
